@@ -9,7 +9,7 @@ $bin=$ORIGIN/build/cc2538dk/sender.cc2538dk
 include $ORIGIN/../common/cc2538-node.resc
 connector Connect radio wireless
 wireless  SetPosition radio 0 0 0
-
+mach clear
 
 
 # noeud 2 : recepteur
@@ -19,5 +19,10 @@ $bin=$ORIGIN/build/cc2538dk/receiver.cc2538dk
 include $ORIGIN/../common/cc2538-node.resc
 connector Connect radio wireless
 wireless SetPosition radio 10 0 0
+mach clear
+
+
+
+emulation LogIEEE802_15_4Traffic
 
 start
