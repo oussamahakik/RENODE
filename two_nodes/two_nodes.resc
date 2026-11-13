@@ -1,0 +1,23 @@
+# Le "canal radio" partagé par les nœuds
+emulation CreateIEEE802_15_4Medium "wireless"
+wireless SetRangeWirelessFunction 11
+
+# noeud 1 : emetteur
+$id = `next_value 1`
+$name="emetteur"
+$bin=$ORIGIN/build/cc2538dk/sender.cc2538dk
+include $ORIGIN/../common/cc2538-node.resc
+connector Connect radio wireless
+wireless  SetPosition radio 0 0 0
+
+
+
+# noeud 2 : recepteur
+$id = `next_value 1`
+$name="recepteur"
+$bin=$ORIGIN/build/cc2538dk/receiver.cc2538dk
+include $ORIGIN/../common/cc2538-node.resc
+connector Connect radio wireless
+wireless SetPosition radio 10 0 0
+
+start
