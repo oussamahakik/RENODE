@@ -1,0 +1,5 @@
+$name?="node1"
+$bin?=$ORIGIN/build/cc2538dk/node.cc2538dk
+include $ORIGIN/../common/cc2538-node.resc
+
+start
