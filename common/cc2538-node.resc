@@ -1,6 +1,4 @@
-$id?=1
 
-mach create $name
 using sysbus
 machine LoadPlatformDescription @platforms/cpus/cc2538.repl
 

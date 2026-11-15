@@ -23,6 +23,6 @@ mach clear
 
 
 
-emulation LogIEEE802_15_4Traffic
+# emulation LogIEEE802_15_4Traffic
 
 start

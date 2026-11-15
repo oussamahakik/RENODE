@@ -1,0 +1,27 @@
+emulation CreateIEEE802_15_4Medium "wireless"
+wireless SetRangeWirelessFunction 11
+
+#noeud 1 qui envoie le ping
+
+mach create "ping"
+$id=`next_value 1`
+$name="ping"
+$bin=$ORIGIN/build/cc2538dk/ping.cc2538dk
+i $ORIGIN/../common/cc2538-node.resc
+connector Connect radio wireless
+wireless SetPosition radio 0 0 0
+
+
+#noeud 2 qui reçoit le ping et repond
+
+mach create "pong"
+$id=`next_value 1`
+$bin=$ORIGIN/build/cc2538dk/pong.cc2538dk
+i $ORIGIN/../common/cc2538-node.resc
+connector Connect radio wireless
+wireless SetPosition radio 10 0 0
+
+
+#emulation LogIEEE802_15_4Traffic
+
+start
