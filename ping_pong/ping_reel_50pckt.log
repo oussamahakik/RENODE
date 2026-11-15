@@ -1,0 +1,129 @@
+picocom v3.1
+
+port is        : /dev/serial/by-id/usb-Silicon_Labs_Zolertia_Firefly_platform_ZOL-B001-A200001962-if00-port0
+flowcontrol    : none
+baudrate is    : 115200
+parity is      : none
+databits are   : 8
+stopbits are   : 1
+escape is      : C-a
+local echo is  : no
+noinit is      : no
+noreset is     : no
+hangup is      : no
+nolock is      : no
+send_cmd is    : sz -vv
+receive_cmd is : rz -vv -E
+imap is        : 
+omap is        : 
+emap is        : crcrlf,delbs,
+logfile is     : none
+initstring     : none
+exit_after is  : not set
+exit is        : no
+
+Type [C-a] [C-h] to see available commands
+Terminal ready
+[INFO: Main      ] Starting Contiki-NG-develop/v5.2-225-ga30468737
+[INFO: Main      ] - Routing: nullrouting
+[INFO: Main      ] - Net: nullnet
+[INFO: Main      ] - MAC: CSMA
+[INFO: Main      ] - 802.15.4 PANID: 0xabcd
+[INFO: Main      ] - 802.15.4 Default channel: 26
+[INFO: Main      ] Node ID: 40041
+[INFO: Main      ] Link-layer address: 0012.4b00.18e6.9c69
+[INFO: Zoul      ] Zolertia Firefly platform
+PONG 1 recu, RTT = 2554 ticks = 77941 us
+PONG 2 recu, RTT = 148 ticks = 4516 us
+PONG 3 recu, RTT = 3059 ticks = 93353 us
+PONG 4 recu, RTT = 2803 ticks = 85540 us
+PONG 5 recu, RTT = 1011 ticks = 30853 us
+PONG 6 recu, RTT = 1012 ticks = 30883 us
+PONG 7 recu, RTT = 2804 ticks = 85571 us
+PONG 8 recu, RTT = 2548 ticks = 77758 us
+PONG 9 recu, RTT = 1167 ticks = 35614 us
+PONG 10 recu, RTT = 1268 ticks = 38696 us
+PONG 11 recu, RTT = 1780 ticks = 54321 us
+PONG 12 recu, RTT = 1268 ticks = 38696 us
+PONG 13 recu, RTT = 2292 ticks = 69946 us
+PONG 14 recu, RTT = 2549 ticks = 77789 us
+PONG 15 recu, RTT = 1170 ticks = 35705 us
+PONG 16 recu, RTT = 1013 ticks = 30914 us
+PONG 17 recu, RTT = 5877 ticks = 179351 us
+PONG 18 recu, RTT = 2805 ticks = 85601 us
+PONG 19 recu, RTT = 1526 ticks = 46569 us
+PONG 20 recu, RTT = 2038 ticks = 62194 us
+PONG 21 recu, RTT = 1526 ticks = 46569 us
+PONG 22 recu, RTT = 913 ticks = 27862 us
+PONG 23 recu, RTT = 1170 ticks = 35705 us
+PONG 24 recu, RTT = 1014 ticks = 30944 us
+PONG 25 recu, RTT = 1782 ticks = 54382 us
+PONG 26 recu, RTT = 1014 ticks = 30944 us
+PONG 27 recu, RTT = 759 ticks = 23162 us
+PONG 28 recu, RTT = 1783 ticks = 54412 us
+PONG 29 recu, RTT = 4343 ticks = 132537 us
+PONG 30 recu, RTT = 3217 ticks = 98175 us
+PONG 31 recu, RTT = 1271 ticks = 38787 us
+PONG 32 recu, RTT = 2040 ticks = 62255 us
+PONG 33 recu, RTT = 1272 ticks = 38818 us
+PONG 34 recu, RTT = 1528 ticks = 46630 us
+PONG 35 recu, RTT = 1784 ticks = 54443 us
+[INFO: Main      ] Starting Contiki-NG-develop/v5.2-225-ga30468737
+[INFO: Main      ] - Routing: nullrouting
+[INFO: Main      ] - Net: nullnet
+[INFO: Main      ] - MAC: CSMA
+[INFO: Main      ] - 802.15.4 PANID: 0xabcd
+[INFO: Main      ] - 802.15.4 Default channel: 26
+[INFO: Main      ] Node ID: 40041
+[INFO: Main      ] Link-layer address: 0012.4b00.18e6.9c69
+[INFO: Zoul      ] Zolertia Firefly platform
+PONG 1 recu, RTT = 2643 ticks = 80657 us
+PONG 2 recu, RTT = 1679 ticks = 51239 us
+PONG 3 recu, RTT = 2124 ticks = 64819 us
+PONG 4 recu, RTT = 844 ticks = 25756 us
+PONG 5 recu, RTT = 910 ticks = 27770 us
+PONG 6 recu, RTT = 1869 ticks = 57037 us
+PONG 7 recu, RTT = 3405 ticks = 103912 us
+PONG 8 recu, RTT = 1101 ticks = 33599 us
+PONG 9 recu, RTT = 1935 ticks = 59051 us
+PONG 10 recu, RTT = 2125 ticks = 64849 us
+PONG 11 recu, RTT = 2126 ticks = 64880 us
+PONG 12 recu, RTT = 2894 ticks = 88317 us
+PONG 13 recu, RTT = 1102 ticks = 33630 us
+PONG 14 recu, RTT = 1170 ticks = 35705 us
+PONG 15 recu, RTT = 2895 ticks = 88348 us
+PONG 16 recu, RTT = 2895 ticks = 88348 us
+PONG 17 recu, RTT = 1615 ticks = 49285 us
+PONG 18 recu, RTT = 2127 ticks = 64910 us
+PONG 19 recu, RTT = 3152 ticks = 96191 us
+PONG 20 recu, RTT = 1872 ticks = 57128 us
+PONG 21 recu, RTT = 1104 ticks = 33691 us
+PONG 22 recu, RTT = 401 ticks = 12237 us
+PONG 23 recu, RTT = 658 ticks = 20080 us
+PONG 24 recu, RTT = 2385 ticks = 72784 us
+PONG 25 recu, RTT = 2385 ticks = 72784 us
+PONG 26 recu, RTT = 593 ticks = 18096 us
+PONG 27 recu, RTT = 592 ticks = 18066 us
+PONG 28 recu, RTT = 2641 ticks = 80596 us
+PONG 29 recu, RTT = 2385 ticks = 72784 us
+PONG 30 recu, RTT = 849 ticks = 25909 us
+PONG 31 recu, RTT = 2385 ticks = 72784 us
+PONG 32 recu, RTT = 1618 ticks = 49377 us
+PONG 33 recu, RTT = 1362 ticks = 41564 us
+PONG 34 recu, RTT = 2386 ticks = 72814 us
+PONG 35 recu, RTT = 1106 ticks = 33752 us
+PONG 36 recu, RTT = 2131 ticks = 65032 us
+PONG 37 recu, RTT = 1875 ticks = 57220 us
+PONG 38 recu, RTT = 1107 ticks = 33782 us
+PONG 39 recu, RTT = 2643 ticks = 80657 us
+PONG 40 recu, RTT = 1619 ticks = 49407 us
+PONG 41 recu, RTT = 2388 ticks = 72875 us
+PONG 42 recu, RTT = 2644 ticks = 80688 us
+PONG 43 recu, RTT = 1364 ticks = 41625 us
+PONG 44 recu, RTT = 1620 ticks = 49438 us
+PONG 45 recu, RTT = 2901 ticks = 88531 us
+PONG 46 recu, RTT = 1365 ticks = 41656 us
+PONG 47 recu, RTT = 151 ticks = 4608 us
+PONG 48 recu, RTT = 1621 ticks = 49468 us
+PONG 49 recu, RTT = 1110 ticks = 33874 us
+PONG 50 recu, RTT = 665 ticks = 20294 us
