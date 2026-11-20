@@ -1,6 +1,21 @@
+# Un nœud CC2538 (Zolertia Firefly) dans Renode.
+#
+# À inclure depuis un scénario, une fois par nœud :
+#   mach create "nom"          (sinon Renode crée une machine "machine-0")
+#   $id=`next_value 1`         adresse du nœud (doit être différente pour chaque nœud)
+#   $bin=$ORIGIN/...           firmware à charger
+#   i $ORIGIN/../common/cc2538-node.resc
+#
+# Variables facultatives (valeur par défaut si le scénario ne les donne pas) :
+#   $id   : adresse du nœud
+#   $mips : vitesse du processeur ; 24 = valeur par défaut de Renode pour la CC2538
+$id?=1
+$mips?=24
 
 using sysbus
 machine LoadPlatformDescription @platforms/cpus/cc2538.repl
+
+cpu PerformanceInMips $mips
 
 machine PyDevFromFile @scripts/pydev/rolling-bit.py 0x400D2004 0x4 True "sysctrl"
 
@@ -8,7 +23,7 @@ sysbus LoadBinary @https://dl.antmicro.com/projects/renode/cc2538_rom_dump.bin-s
 sysbus LoadELF $bin
 cpu VectorTableOffset `sysbus GetSymbolAddress "vectors"`
 
-
+# Adresse IEEE du nœud (lue par Contiki au démarrage) : 8 octets, dont $id
 sysbus WriteDoubleWord 0x00280028 $id
 sysbus WriteDoubleWord 0x0028002C 0x00000000
 

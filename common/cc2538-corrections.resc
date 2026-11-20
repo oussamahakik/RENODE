@@ -1,0 +1,11 @@
+# Deux corrections du modèle CC2538 de Renode, pour retrouver le comportement
+# de la vraie carte. À inclure juste après cc2538-node.resc, pour chaque nœud :
+#   i $ORIGIN/../common/cc2538-corrections.resc
+#
+# 1. Générateur de nombres aléatoires (absent de Renode, voir cc2538-rng.py).
+#    Sans lui, random_rand() vaut toujours 0 et CSMA n'attend jamais avant d'émettre.
+machine PyDevFromFile $ORIGIN/cc2538-rng.py 0x400D7000 0x28 True "rng"
+
+# 2. SysTick : Contiki le règle pour une puce à 16 MHz (128 tics/s), mais le modèle
+#    Renode le fait compter à 1 MHz -> chaque tic durait 125 ms au lieu de 7,8 ms.
+nvic Frequency 16000000
