@@ -143,7 +143,7 @@ macro reset
 runMacro $reset
 ```
 
-> 📖 La doc officielle : *« many Renode sample scripts define the `$reset` macro. This macro is used
+>  La doc officielle : *« many Renode sample scripts define the `$reset` macro. This macro is used
 > whenever the `machine Reset` method is called by the user or via the simulation logic »*
 > ([Monitor and script syntax][doc-syntax], section « Monitor variable types »).
 
