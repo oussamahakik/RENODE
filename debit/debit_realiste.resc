@@ -1,0 +1,35 @@
+# Test de debit dans Renode CORRIGE : meme scenario que debit.resc, avec les
+# deux corrections de common/cc2538-corrections.resc (generateur de nombres
+# aleatoires + vitesse du SysTick).
+#
+# Compiler d'abord :  gmake   (dans ce dossier)
+# Lancer :            renode debit_realiste.resc
+# Avant de relancer, supprimer debit_renode_realiste.log
+
+$mips=32
+
+emulation CreateIEEE802_15_4Medium "wireless"
+wireless SetRangeWirelessFunction 11
+
+# noeud 1 : emetteur
+mach create "emetteur"
+$id=`next_value 1`
+$bin=$ORIGIN/build/b1_t100/zoul/firefly/emetteur.zoul
+i $ORIGIN/../common/cc2538-node.resc
+i $ORIGIN/../common/cc2538-corrections.resc
+connector Connect radio wireless
+wireless SetPosition radio 0 0 0
+
+# noeud 2 : recepteur
+mach create "recepteur"
+$id=`next_value 1`
+$bin=$ORIGIN/build/b1_t100/zoul/firefly/recepteur.zoul
+i $ORIGIN/../common/cc2538-node.resc
+i $ORIGIN/../common/cc2538-corrections.resc
+connector Connect radio wireless
+wireless SetPosition radio 10 0 0
+sysbus.uart0 CreateFileBackend $ORIGIN/debit_renode_realiste_broadcast.log true
+
+#emulation LogIEEE802_15_4Traffic
+
+start

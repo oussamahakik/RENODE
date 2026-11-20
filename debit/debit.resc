@@ -1,0 +1,35 @@
+# Test de debit dans Renode TEL QU'IL EST FOURNI (sans corrections).
+# Pour la version corrigee : debit_realiste.resc
+#
+# Compiler d'abord :  gmake   (dans ce dossier)
+# Lancer :            renode debit.resc
+# Avant de relancer, supprimer debit_renode.log
+# (Renode n'ecrase pas un fichier existant : il en cree un nouveau suffixe .1, .2...)
+
+$mips=32
+
+emulation CreateIEEE802_15_4Medium "wireless"
+wireless SetRangeWirelessFunction 11
+
+# noeud 1 : emetteur (envoie les trames le plus vite possible)
+mach create "emetteur"
+$id=`next_value 1`
+$bin=$ORIGIN/build/b1_t100/zoul/firefly/emetteur.zoul
+i $ORIGIN/../common/cc2538-node.resc
+connector Connect radio wireless
+wireless SetPosition radio 0 0 0
+
+# noeud 2 : recepteur (compte les trames et calcule le debit)
+mach create "recepteur"
+$id=`next_value 1`
+$bin=$ORIGIN/build/b1_t100/zoul/firefly/recepteur.zoul
+i $ORIGIN/../common/cc2538-node.resc
+connector Connect radio wireless
+
+wireless SetPosition radio 10 0 0
+sysbus.uart0 CreateFileBackend $ORIGIN/debit_renode_broadcast.log true
+
+# Decommenter pour voir les trames dans Wireshark
+emulation LogIEEE802_15_4Traffic
+
+start
