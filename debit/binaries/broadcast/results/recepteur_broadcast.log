@@ -1,0 +1,38 @@
+[INFO: Main      ] Starting Contiki-NG-develop/v5.2-225-ga30468737
+[INFO: Main      ] - Routing: nullrouting
+[INFO: Main      ] - Net: nullnet
+[INFO: Main      ] - MAC: CSMA
+[INFO: Main      ] - 802.15.4 PANID: 0xabcd
+[INFO: Main      ] - 802.15.4 Default channel: 26
+[INFO: Main      ] Node ID: 40041
+[INFO: Main      ] Link-layer address: 0012.4b00.18e6.9c69
+[INFO: Zoul      ] Zolertia Firefly platform
+RECEPTEUR pret
+SECONDE 1 : 37 trames
+SECONDE 2 : 34 trames
+SECONDE 3 : 44 trames
+SECONDE 4 : 44 trames
+SECONDE 5 : 39 trames
+SECONDE 6 : 25 trames
+SECONDE 7 : 27 trames
+SECONDE 8 : 23 trames
+SECONDE 9 : 29 trames
+SECONDE 10 : 26 trames
+SECONDE 11 : 27 trames
+SECONDE 12 : 37 trames
+SECONDE 13 : 24 trames
+SECONDE 14 : 30 trames
+SECONDE 15 : 27 trames
+SECONDE 16 : 29 trames
+SECONDE 17 : 34 trames
+SECONDE 18 : 36 trames
+SECONDE 19 : 32 trames
+SECONDE 20 : 25 trames
+SECONDE 21 : 30 trames
+SECONDE 22 : 23 trames
+SECONDE 23 : 31 trames
+SECONDE 24 : 22 trames
+SECONDE 25 : 24 trames
+SECONDE 26 : 27 trames
+SECONDE 27 : 24 trames
+=== BILAN RECEPTEUR : 810 recues, 189 perdues, 100 octets par trame, duree = 26648 ms, 30.3 trames/s, debit utile = 24.2 kbit/s ===
