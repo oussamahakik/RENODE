@@ -39,7 +39,7 @@ Donc dans `two_nodes.resc`, après le `mach clear` qui suit l'émetteur :
 L'émetteur n'est pas gêné par ce remplacement : il a déjà chargé son programme et son adresse au
 moment de sa création.
 
-> 📖 Un exemple officiel de Renode explique exactement ça, en commentaire juste avant un `mach clear`
+>  Un exemple officiel de Renode explique exactement ça, en commentaire juste avant un `mach clear`
 > ([`scripts/multi-node/quark-c1000-zephyr/demo.resc`][demo-quark], lignes 44-47) :
 >
 > *« The Monitor works in the context of the current machine. It allows the user to access the
